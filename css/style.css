@@ -30,3 +30,33 @@
     border-radius: 4px;
     text-decoration: none;
 }
+
+.hero {
+    background: url('../img/mainvisual.jpg') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-inner {
+    max-width: 1100px;
+    margin: 0auto;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 40px;
+    margin-bobtom: 16px;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #8b5e3c;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+
+}
