@@ -10,20 +10,33 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <h1 class="logo">Lumiere Cafe</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Access</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="btn-reserve">予約する</a>
-        </div>
-    </header>
+    <!-- ヘッダー部分 -->
+<header id="header">
+    <div class="container">
+        <h1 class="logo">Lumiere Cafe</h1>
+        
+        <!-- ▼ スマホ用のハンバーガーボタンを追加 ▼ -->
+        <button class="hamburger" id="js-hamburger" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" id="js-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#access">Access</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- （heroやfeaturesセクションのあと、footerの前あたりに追加） -->
+
+<!-- ▼ 営業時間・店舗情報セクションを追加 ▼ -->
+
     <section class="hero">
         <div class="hero-inner">
             <h2 class="hero-title">特別な時間を あなたに</h2>
@@ -64,7 +77,26 @@
 
 </div>
 </div>
+
     </section>
+    <section id="access" class="access">
+    <h2 class="section-title">Information & Access</h2>
+    <div class="access-container">
+        <div class="access-info">
+            <h3>Cafe Lumiere</h3>
+            <p class="address">〒100-0000 東京都千代田区1-2-3</p>
+            <dl class="info-list">
+                <dt>営業時間</dt>
+                <dd>11:00 - 19:00（L.O. 18:30）</dd>
+                <dt>定休日</dt>
+                <dd>水曜日・第2火曜日</dd>
+                <dt>TEL</dt>
+                <dd>03-0000-0000</dd>
+            </dl>
+        </div>
+    </div>
+</section>
+
     <footer id="footer">
         <div class="footer-inner">
 
@@ -105,9 +137,20 @@
             </div>
         </div>
 
+
         <div class="copyright">
             <p>© 2026 Lumiere Cafe.All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+    const hamburger = document.getElementById('js-hamburger');
+    const nav = document.getElementById('js-nav');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+    });
+</script>
 </body>
 </html>
